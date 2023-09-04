@@ -50,19 +50,19 @@ export default {
       }
     },
     searchRecipes() {
-    axios.post('http://your-backend-api.com/searchRecipes', {
-      ingredients: this.ingredients // array of ingredients
-    })
-    .then(response => {
-      // handle success
-      console.log("Received recipes from backend: ", response.data);
-      this.filteredRecipes = response.data; // Assuming the server returns the filtered recipes
-    })
-    .catch(error => {
-      // handle error
-      console.log("An error occurred: ", error);
-    });
-  },
+      axios.post('http://your-backend-api.com/searchRecipes', {
+        ingredients: this.ingredients // array of ingredients
+      })
+        .then(response => {
+          // handle success
+          console.log("Received recipes from backend: ", response.data);
+          this.filteredRecipes = response.data; // Assuming the server returns the filtered recipes
+        })
+        .catch(error => {
+          // handle error
+          console.log("An error occurred: ", error);
+        });
+    },
     showRecipeDetails(recipeId) {
       // Do something when a recipe is clicked, e.g., show details, navigate, etc.
       alert(`Recipe with ID: ${recipeId} clicked!`);
