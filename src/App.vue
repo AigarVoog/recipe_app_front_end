@@ -50,7 +50,7 @@ export default {
       }
     },
     searchRecipes() {
-      axios.post('http://your-backend-api.com/searchRecipes', {
+      axios.post('http://localhost:5000/api/searchRecipes', {
         ingredients: this.ingredients // array of ingredients
       })
         .then(response => {
