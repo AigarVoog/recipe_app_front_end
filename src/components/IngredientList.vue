@@ -1,6 +1,7 @@
 <template>
     <div class="ingredient-list">
-        <span v-for="ingredient in ingredients" :key="ingredient">
+        <span class="label" v-if="ingredients.length > 0"><h3>Added ingredients: </h3></span>
+        <span class="list-item" v-for="ingredient in ingredients" :key="ingredient">
             {{ ingredient }}
             <button @click="removeIngredient(ingredient)">x</button>
         </span>
@@ -19,10 +20,14 @@ export default {
 </script>
   
 <style scoped>
-.ingredient-list span {
+.ingredient-list .list-item {
     margin: 5px;
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
+}
+.ingredient-list .label {
+    margin-right: 10px;
+    font-weight: bold;
 }
 </style>
